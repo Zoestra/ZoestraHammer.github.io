@@ -1,7 +1,11 @@
 /* ============================================================
    ZOESTRA HAMMER — CYBERPUNK PORTFOLIO
    Old-net aesthetic + augmented-ui + cybercore-inspired effects
+   Fonts: Daemon KDE scheme
    ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Rajdhani:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hack&display=swap');
 
 /* --- CSS Variables / Design Tokens --- */
 :root {
@@ -17,10 +21,34 @@
   --chrome-dim: #555566;
   --glow-cyan: 0 0 8px #00f0ff, 0 0 20px rgba(0, 240, 255, 0.4);
   --glow-magenta: 0 0 8px #ff2a6d, 0 0 20px rgba(255, 42, 109, 0.4);
-  --font-mono: 'Courier New', 'Consolas', 'Lucida Console', monospace;
-  --font-display: 'Courier New', 'Consolas', monospace;
+  --font-display: 'Orbitron', sans-serif;
+  --font-body: 'Rajdhani', sans-serif;
+  --font-mono: 'Hack', 'Courier New', 'Consolas', 'Lucida Console', monospace;
+  --font-size-body: 10pt;
+  --font-size-small: 8pt;
   --scanline-opacity: 0.04;
 }
+
+.audiowide-regular {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.orbitron-title {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.rajdhani-medium {
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
 
 /* --- Reset --- */
 *, *::before, *::after {
@@ -83,6 +111,7 @@ main,
 /* --- Typography --- */
 h1, h2, h3, h4 {
   font-family: var(--font-display);
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.15em;
 }
@@ -101,63 +130,162 @@ a:hover {
   text-shadow: var(--glow-magenta);
 }
 
-/* --- Cyber Glitch Text Effect --- */
+/* --- Cyber Glitch Text Effect (from ahmodmusa.com tutorial, modified) --- */
+
+/* Base: visible text, pseudo-elements overlay with color glitch slices.
+   No background on pseudo-elements — avoids the black-bar artifact.
+   Glitch fires rarely by default; much faster on :hover.              */
 .glitch {
   position: relative;
-  color: var(--cyan);
-  text-shadow: var(--glow-cyan);
+  font-family: var(--font-display);
+  color: #fff;
+  text-align: center;
+  letter-spacing: 2px;
 }
+
 .glitch::before,
 .glitch::after {
   content: attr(data-text);
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-}
-.glitch::before {
-  color: var(--magenta);
-  animation: glitch-skew 0.4s ease-in-out infinite alternate-reverse;
-  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
-}
-.glitch::after {
-  color: var(--cyan);
-  animation: glitch-skew 0.3s ease-in-out infinite alternate;
-  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
-}
-@keyframes glitch-skew {
-  0% { transform: translate(0); }
-  20% { transform: translate(-3px, 2px); }
-  40% { transform: translate(3px, -1px); }
-  60% { transform: translate(-1px, -2px); }
-  80% { transform: translate(2px, 1px); }
-  100% { transform: translate(0); }
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
+  pointer-events: none;
 }
 
-/* Subtle glitch for smaller headings */
+/* Pink offset — fires ~3 times every 6 s */
+.glitch::before {
+  left: 2px;
+  text-shadow: -1px 0 var(--magenta);
+  animation: glitch-pink 6s infinite;
+}
+
+/* Cyan offset — fires ~3 times every 7 s (staggered prime duration) */
+.glitch::after {
+  left: -2px;
+  text-shadow: -1px 0 var(--cyan);
+  animation: glitch-cyan 7s infinite;
+}
+
+/* Hover: frequent glitch (every ~0.6 s) */
+.glitch:hover::before { animation: glitch-fast-a 0.6s infinite; }
+.glitch:hover::after  { animation: glitch-fast-b 0.7s infinite; }
+
+/* ── Keyframes: rare idle glitch ── */
+
+@keyframes glitch-pink {
+  /* three brief bursts */
+  0%,   1.9%            { opacity: 0; clip: rect(0, 9999px, 0, 0); transform: skew(0deg); }
+  2%,   2.6%            { opacity: 1; clip: rect(8px, 9999px, 35px, 0); transform: skew(0.5deg); }
+  2.8%, 34.9%           { opacity: 0; clip: rect(0, 9999px, 0, 0); transform: skew(0deg); }
+  35%,  35.6%           { opacity: 1; clip: rect(38px, 9999px, 62px, 0); transform: skew(-0.3deg); }
+  35.8%, 67.9%          { opacity: 0; clip: rect(0, 9999px, 0, 0); transform: skew(0deg); }
+  68%,  68.6%           { opacity: 1; clip: rect(20px, 9999px, 50px, 0); transform: skew(0.6deg); }
+  68.8%, 100%           { opacity: 0; clip: rect(0, 9999px, 0, 0); transform: skew(0deg); }
+}
+
+@keyframes glitch-cyan {
+  0%,   3.4%            { opacity: 0; clip: rect(0, 9999px, 0, 0); transform: skew(0deg); }
+  3.5%, 4.1%            { opacity: 1; clip: rect(42px, 9999px, 68px, 0); transform: skew(-0.4deg); }
+  4.3%, 39.9%           { opacity: 0; clip: rect(0, 9999px, 0, 0); transform: skew(0deg); }
+  40%,  40.6%           { opacity: 1; clip: rect(12px, 9999px, 36px, 0); transform: skew(0.7deg); }
+  40.8%, 74.9%          { opacity: 0; clip: rect(0, 9999px, 0, 0); transform: skew(0deg); }
+  75%,  75.6%           { opacity: 1; clip: rect(55px, 9999px, 78px, 0); transform: skew(-0.2deg); }
+  75.8%, 100%           { opacity: 0; clip: rect(0, 9999px, 0, 0); transform: skew(0deg); }
+}
+
+/* ── Keyframes: intense hover glitch ── */
+
+@keyframes glitch-fast-a {
+  0%    { opacity: 0; clip: rect(5px, 9999px, 25px, 0);  transform: skew(0deg); }
+  10%   { opacity: 1; clip: rect(30px, 9999px, 55px, 0); transform: skew(0.5deg); }
+  20%   { opacity: 1; clip: rect(10px, 9999px, 35px, 0); transform: skew(-0.3deg); }
+  30%   { opacity: 0; clip: rect(50px, 9999px, 75px, 0); transform: skew(0.2deg); }
+  45%   { opacity: 1; clip: rect(18px, 9999px, 42px, 0); transform: skew(-0.6deg); }
+  55%   { opacity: 0; clip: rect(60px, 9999px, 82px, 0); transform: skew(0.1deg); }
+  70%   { opacity: 1; clip: rect(25px, 9999px, 48px, 0); transform: skew(0.7deg); }
+  80%   { opacity: 1; clip: rect(40px, 9999px, 65px, 0); transform: skew(-0.2deg); }
+  90%   { opacity: 1; clip: rect(8px, 9999px, 30px, 0);  transform: skew(0.4deg); }
+  100%  { opacity: 0; clip: rect(70px, 9999px, 90px, 0); transform: skew(0deg); }
+}
+
+@keyframes glitch-fast-b {
+  0%    { opacity: 0; clip: rect(45px, 9999px, 70px, 0); transform: skew(0deg); }
+  15%   { opacity: 1; clip: rect(12px, 9999px, 38px, 0); transform: skew(-0.5deg); }
+  25%   { opacity: 0; clip: rect(55px, 9999px, 80px, 0); transform: skew(0.3deg); }
+  35%   { opacity: 1; clip: rect(20px, 9999px, 44px, 0); transform: skew(0.6deg); }
+  50%   { opacity: 1; clip: rect(35px, 9999px, 60px, 0); transform: skew(-0.4deg); }
+  60%   { opacity: 1; clip: rect(65px, 9999px, 85px, 0); transform: skew(0.1deg); }
+  75%   { opacity: 0; clip: rect(5px, 9999px, 28px, 0);  transform: skew(-0.7deg); }
+  85%   { opacity: 1; clip: rect(48px, 9999px, 72px, 0); transform: skew(0.3deg); }
+  95%   { opacity: 0; clip: rect(15px, 9999px, 40px, 0); transform: skew(0deg); }
+  100%  { opacity: 0; clip: rect(58px, 9999px, 78px, 0); transform: skew(0deg); }
+}
+
+/* ── Subtle glitch for section headings ── */
+
 .glitch-subtle {
   position: relative;
+  font-family: var(--font-display);
   color: var(--cyan);
+  text-align: center;
+  letter-spacing: 2px;
   text-shadow: var(--glow-cyan);
 }
+
+.glitch-subtle::before,
 .glitch-subtle::after {
   content: attr(data-text);
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  color: var(--magenta);
-  opacity: 0.5;
-  animation: glitch-sub 3s ease-in-out infinite;
-  clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  opacity: 0;
+  pointer-events: none;
 }
-@keyframes glitch-sub {
-  0%, 94%, 100% { transform: translate(0); opacity: 0; }
-  95% { transform: translate(-2px, 1px); opacity: 0.6; }
-  97% { transform: translate(2px, 0); opacity: 0; }
+
+.glitch-subtle::before {
+  left: 1px;
+  text-shadow: -1px 0 var(--magenta);
+  animation: glitch-sub-a 11s infinite;
+}
+
+.glitch-subtle::after {
+  left: -1px;
+  text-shadow: -1px 0 var(--cyan);
+  animation: glitch-sub-b 13s infinite;
+}
+
+.glitch-subtle:hover::before { animation: glitch-fast-a 0.7s infinite; }
+.glitch-subtle:hover::after  { animation: glitch-fast-b 0.8s infinite; }
+
+@keyframes glitch-sub-a {
+  0%,   3.9%            { opacity: 0; clip: rect(0, 9999px, 0, 0); transform: skew(0deg); }
+  4%,   4.4%            { opacity: 1; clip: rect(22px, 9999px, 50px, 0); transform: skew(0.3deg); }
+  4.5%, 52.9%           { opacity: 0; clip: rect(0, 9999px, 0, 0); transform: skew(0deg); }
+  53%,  53.4%           { opacity: 1; clip: rect(35px, 9999px, 65px, 0); transform: skew(-0.2deg); }
+  53.5%, 100%           { opacity: 0; clip: rect(0, 9999px, 0, 0); transform: skew(0deg); }
+}
+
+@keyframes glitch-sub-b {
+  0%,   6.9%            { opacity: 0; clip: rect(0, 9999px, 0, 0); transform: skew(0deg); }
+  7%,   7.4%            { opacity: 1; clip: rect(40px, 9999px, 70px, 0); transform: skew(-0.4deg); }
+  7.5%, 58.9%           { opacity: 0; clip: rect(0, 9999px, 0, 0); transform: skew(0deg); }
+  59%,  59.4%           { opacity: 1; clip: rect(15px, 9999px, 42px, 0); transform: skew(0.5deg); }
+  59.5%, 100%           { opacity: 0; clip: rect(0, 9999px, 0, 0); transform: skew(0deg); }
+}
+
+/* Accessibility: disable all glitch animation */
+@media (prefers-reduced-motion: reduce) {
+  .glitch::before, .glitch::after,
+  .glitch-subtle::before, .glitch-subtle::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
+  .glitch:hover::before, .glitch:hover::after,
+  .glitch-subtle:hover::before, .glitch-subtle:hover::after {
+    animation: none !important;
+    opacity: 0 !important;
+  }
 }
 
 /* --- Neon Text Glow --- */
