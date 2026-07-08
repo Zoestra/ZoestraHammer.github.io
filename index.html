@@ -1,29 +1,149 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#games">Games</a>
-        <a href="#art">Art</a>
-        <a href="#code">Code</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zoestra Hammer — Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <main>
-      <section id="home">
-        <h1>Zoestra Hammer</h1>
-        <p>Game Designer & Artist</p>
-        <p>Welcome to my portfolio. I create games, art, and code.</p>
-      </section>
-    </main>
-  </body>
+  <!-- Navigation -->
+  <header class="nav-bar">
+    <div class="wrapper">
+      <a href="index.html" class="nav-logo">ZH</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="gamejams.html">Game Jams</a></li>
+          <li><a href="index.html#music">Music</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero">
+      <h1 class="glitch" data-text="ZOESTRA HAMMER">ZOESTRA HAMMER</h1>
+      <p class="tagline">Game Designer &amp; Artist</p>
+      <div class="ascii-divider">
+        ═══════════ ⋆★⋆ ═══════════
+      </div>
+      <p style="max-width:500px;color:var(--chrome-dim);font-size:0.9rem;">
+        I create strange games, dark art, and experimental code.<br>
+        Welcome to the grid.
+      </p>
+      <div class="hero-links" style="margin-top:1.5rem;">
+        <a href="gamejams.html" class="btn">▸ View Game Jams</a>
+        <a href="#contact" class="btn btn-magenta">▸ Contact</a>
+      </div>
+    </section>
+
+    <!-- Game Jams Preview -->
+    <section id="games" class="home-section">
+      <h2 class="glitch-subtle" data-text="RECENT PROJECTS">RECENT PROJECTS</h2>
+      <div class="wrapper">
+        <div class="grid-3">
+
+          <a href="GameJams/Black_Myth_Wuziqi/" class="project-card">
+            <img class="thumb" src="GameJams/Black_Myth_Wuziqi/BMWuZiQi_01.png"
+                 alt="Black Myth Wuziqi" loading="lazy" />
+            <h3>Black Myth: Wuziqi</h3>
+            <p>Classic Gomoku with a dark fantasy twist — and powerups.</p>
+            <span class="tag" style="margin-top:0.5rem;">Game Jam</span>
+          </a>
+
+          <a href="GameJams/Unfinished_Eldritch_Game/" class="project-card">
+            <img class="thumb" src="GameJams/Unfinished_Eldritch_Game/squidboi_posed.png"
+                 alt="Unfinished Eldritch Game" loading="lazy" />
+            <h3>Unfinished Eldritch Game</h3>
+            <p>Arcade shoot-em-up. You're the monster. Destroy the city.</p>
+            <span class="tag tag-magenta">Game Jam</span>
+          </a>
+
+          <a href="GameJams/VaporBoi/" class="project-card">
+            <img class="thumb" src="GameJams/VaporBoi/VB_The_Dream_01.png"
+                 alt="VaporBoi" loading="lazy" />
+            <h3>VaporBoi</h3>
+            <p>VR newspaper delivery meets frisbee golf in a synthwave world.</p>
+            <span class="tag tag-green">Game Jam</span>
+          </a>
+
+        </div>
+        <div style="text-align:center;margin-top:2rem;">
+          <a href="gamejams.html" class="btn">▸ All Game Jams</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Music -->
+    <section id="music" class="home-section">
+      <h2 class="glitch-subtle" data-text="MUSIC">MUSIC</h2>
+      <div class="wrapper">
+        <div class="card card-magenta">
+          <div class="card-title">// soundtrack_work</div>
+          <p style="text-align:center;margin:1rem 0;color:var(--chrome-dim);">
+            Music and sound design portfolio coming soon.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="home-section">
+      <h2 class="glitch-subtle" data-text="ABOUT">ABOUT</h2>
+      <div class="wrapper">
+        <div class="about-blurb">
+          <p>
+            <span class="highlight">Zoestra Hammer</span> is a game designer,
+            artist, and developer creating work at the intersection of
+            <span class="highlight">dark fantasy</span>,
+            <span class="highlight">cosmic horror</span>, and
+            <span class="highlight">retro-futurism</span>.
+          </p>
+          <p>
+            From board games with powerups, to arcade monster rampages
+            and VR newspaper delivery — each project pushes
+            the boundaries of genre and expectation.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="home-section">
+      <h2 class="glitch-subtle" data-text="CONTACT">CONTACT</h2>
+      <div class="wrapper">
+        <div class="card" style="max-width:500px;margin:0 auto;">
+          <div class="card-title">// send_transmission</div>
+          <div class="contact-links" style="margin-top:1rem;">
+            <a href="https://github.com/Zoestra" class="btn">GitHub</a>
+            <a href="https://zoestrahammer.itch.io" class="btn btn-magenta">itch.io</a>
+          </div>
+        </div>
+        <div class="terminal" style="max-width:500px;margin:1.5rem auto;">
+          <span class="prompt">status --online</span><br>
+          <span style="color:var(--chrome-dim);">awaiting incoming connection on port 8080...</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="wrapper">
+      <p>© 2026 Zoestra Hammer &mdash; All rights reserved.</p>
+      <p style="margin-top:0.25rem;">
+        <span class="blink">█</span> ONLINE &mdash;
+        <a href="https://www.zoestrahammer.com">www.zoestrahammer.com</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
 </html>
