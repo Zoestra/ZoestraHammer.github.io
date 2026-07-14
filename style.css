@@ -342,7 +342,7 @@ a:hover {
   list-style: none;
 }
 .nav-links li {
-  margin: 0 -2px;
+  margin: 0;
 }
 .nav-links a {
   display: block;
@@ -366,7 +366,7 @@ a:hover {
   border-left-color: var(--cyan);
   border-right-color: var(--cyan);
   text-shadow: 0 0 6px var(--cyan);
-  background: rgba(5, 5, 16, 0.94);
+  background: rgba(0, 240, 255, 0.08);
 }
 .nav-links a.active {
   color: var(--cyan);
