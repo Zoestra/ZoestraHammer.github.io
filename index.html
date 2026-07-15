@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zoestra Hammer — Portfolio</title>
+  <title>Zoestra Hammer</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png" />
+  <link rel="manifest" href="img/favicon_io/site.webmanifest" />
 </head>
 <body>
 
@@ -16,10 +21,9 @@
       </a>
       <nav>
         <ul class="nav-links">
-          <li><a href="index.html" class="active">About</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="gamejams.html">Game Jams</a></li>
           <li><a href="music.html">Music</a></li>
-          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -29,21 +33,81 @@
 
     <!-- Hero -->
     <section class="hero">
-      <img src="img/CyberZoeSkull_hex.png" alt="" class="hero-skull" />
-      <h1 class="glitch" data-text="ZOESTRA HAMMER">ZOESTRA HAMMER</h1>
-      <p class="tagline">Game Designer &amp; Artist</p>
-      <div class="ascii-divider">
-        ═══════════ ⋆★⋆ ═══════════
+      <div class="hero-header">
+        <h1 class="glitch" data-text="ZOESTRA HAMMER">ZOESTRA HAMMER</h1>
+        <p class="tagline">Game Designer &amp; Artist</p>
+        <img src="img/divider2.png" alt="" class="hero-divider" />
       </div>
-      <p style="max-width:500px;color:var(--chrome-dim);font-size:0.9rem;">
-        I create strange games, dark art, and experimental code.<br>
-        Welcome to the grid.
-      </p>
-      <div class="hero-links" style="margin-top:1.5rem;">
-        <a href="gamejams.html" class="btn" data-text="▸ View Game Jams">▸ View Game Jams</a>
-        <a href="contact.html" class="btn btn-magenta" data-text="▸ Contact">▸ Contact</a>
+
+      <!-- Social Links -->
+      <div class="hero-links-section">
+        <img src="img/CyberZoeSkull_hex.png" alt="" class="hero-skull" />
+
+        <div class="linktree-links">
+
+        <a href="https://github.com/Zoestra" class="link-btn" target="_blank" rel="noopener">
+          <span class="link-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </span>
+          GitHub
+        </a>
+
+        <a href="https://worldbuildingsimulator.com" class="link-btn" target="_blank" rel="noopener">
+          <span class="link-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </span>
+          WorldbuildingSimulator.com
+        </a>
+
+        <a href="https://linkedin.com/in/zoestrahammer" class="link-btn" target="_blank" rel="noopener">
+          <span class="link-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </span>
+          LinkedIn
+        </a>
+
+        <a href="#" class="link-btn" id="wechat-btn">
+          <span class="link-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.29.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.596-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm3.91 4.674c-3.716 0-6.733 2.653-6.733 5.923 0 3.271 3.017 5.924 6.733 5.924.816 0 1.616-.128 2.369-.37a.788.788 0 0 1 .63.087l1.63.956a.267.267 0 0 0 .14.047c.133 0 .24-.11.24-.245 0-.06-.018-.118-.04-.178l-.338-1.277a.507.507 0 0 1 .18-.567C22.375 20.145 24 18.33 24 16.217c0-3.07-2.648-5.552-5.928-5.552h-.564zm-2.41 2.358c.535 0 .97.454.97 1.013 0 .56-.435 1.012-.97 1.012-.536 0-.97-.453-.97-1.012 0-.559.434-1.013.97-1.013zm4.82 0c.535 0 .97.454.97 1.013 0 .56-.435 1.012-.97 1.012-.536 0-.97-.453-.97-1.012 0-.559.434-1.013.97-1.013z"/></svg>
+          </span>
+          WeChat
+        </a>
+
+        <a href="https://youtube.com/@ZoestraHammer" class="link-btn" target="_blank" rel="noopener">
+          <span class="link-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </span>
+          YouTube
+        </a>
+
+        <a href="mailto:contact@zoestrahammer.com" class="link-btn link-btn-magenta">
+          <span class="link-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 4-10 8L2 4"/></svg>
+          </span>
+          Email
+        </a>
+
       </div>
+    </div>
     </section>
+
+    <!-- WeChat Modal -->
+    <div class="modal-overlay" id="wechat-modal">
+      <div class="modal-card">
+        <button class="modal-close" id="modal-close">&times;</button>
+        <div class="card-title">// wechat_qr</div>
+        <p style="color:var(--chrome-dim);margin-bottom:1rem;text-align:center;">Scan to add me on WeChat</p>
+        <div class="qr-placeholder">
+          [ QR Code ]
+        </div>
+      </div>
+    </div>
+
+    <!-- Terminal Status -->
+    <div class="terminal" style="max-width:500px;margin:1.5rem auto;">
+      <span class="prompt">status --online</span><br>
+      <span style="color:var(--chrome-dim);">awaiting incoming connection on port 8080...</span>
+    </div>
 
   </main>
 
@@ -52,10 +116,26 @@
     <div class="wrapper">
       <p>© 2026 Zoestra Hammer &mdash; All rights reserved.</p>
       <p style="margin-top:0.25rem;">
+        <span class="blink">█</span> ONLINE &mdash;
         <a href="https://www.zoestrahammer.com">www.zoestrahammer.com</a>
       </p>
+      <a class="qr-foot-btn" href="qrcode.html">[ QR ]</a>
     </div>
   </footer>
+
+  <script>
+    // WeChat modal toggle
+    document.getElementById('wechat-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.getElementById('wechat-modal').classList.add('active');
+    });
+    document.getElementById('modal-close').addEventListener('click', function() {
+      document.getElementById('wechat-modal').classList.remove('active');
+    });
+    document.getElementById('wechat-modal').addEventListener('click', function(e) {
+      if (e.target === this) this.classList.remove('active');
+    });
+  </script>
 
 </body>
 </html>
