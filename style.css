@@ -54,18 +54,16 @@ body {
   position: relative;
 }
 
-/* ── Dark tint overlay ── */
-/* body::before {
+/* ── Dark tint overlay over background ── */
+body::before {
   content: "";
-  position: fixed;
-  top: 3px;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  position: absolute;
+  inset: 0;
   z-index: 0;
   pointer-events: none;
-  background: rgba(5, 5, 16, 0.25);
-} */
+  background: rgba(5, 5, 16, 0.18);
+  min-height: 100vh;
+}
 
 /* ── CRT Scanlines ── */
 body::after {
@@ -520,11 +518,16 @@ a:hover {
 .media-embed {
   width: 100%;
   margin: 1rem 0;
-  border: 1px solid var(--chrome-dim);
 }
 .media-embed video {
   width: 100%;
   display: block;
+  border: 1px solid var(--cyan-dim);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.media-embed video:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 12px rgba(0,240,255,0.2);
 }
 
 /* ============================================================
@@ -777,9 +780,9 @@ a:hover {
   z-index: 20000;
   background: rgba(5, 5, 16, 0.88);
   backdrop-filter: blur(4px);
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding-top: 22vh;
+  overflow-y: auto;
 }
 .modal-overlay.active {
   display: flex;
@@ -792,11 +795,12 @@ a:hover {
     100% calc(100% - 12px), calc(100% - 12px) 100%,
     12px 100%, 0px calc(100% - 12px)
   );
-  padding: 2rem;
-  max-width: 340px;
-  width: 90%;
+  padding: 1.5rem;
+  max-width: 480px;
+  width: 92%;
   text-align: center;
   position: relative;
+  margin: 1rem 0;
 }
 .modal-close {
   position: absolute;
