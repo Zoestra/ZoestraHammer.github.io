@@ -387,6 +387,8 @@ a:hover {
   background: var(--bg-void);
 }
 
+
+
 /* ============================================================
    PAGE HEADER
    ============================================================ */
@@ -1135,9 +1137,6 @@ body.modal-open .section-divider {
   .glitch-subtle::before, .glitch-subtle::after,
   .btn::before, .btn::after {
     animation: none !important;
-    opacity: 0 !important;
-  }
-}
     opacity: 0 !important;
   }
 }
