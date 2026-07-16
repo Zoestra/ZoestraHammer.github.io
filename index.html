@@ -94,11 +94,23 @@
     <!-- WeChat Modal -->
     <div class="modal-overlay" id="wechat-modal">
       <div class="modal-card">
-        <button class="modal-close" id="modal-close">&times;</button>
+        <button class="modal-close" data-modal="wechat-modal">&times;</button>
         <div class="card-title">// wechat_qr</div>
         <p style="color:var(--chrome-dim);margin-bottom:1rem;text-align:center;">Scan to add me on WeChat</p>
         <div class="qr-placeholder">
-          <img src="img/zh_wechat_qr.svg" alt="WeChat QR" style="width:280px;height:280px;display:block;" />
+          <img src="img/zh_wechat_qr.svg" alt="WeChat QR" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Site QR Modal -->
+    <div class="modal-overlay" id="site-qr-modal">
+      <div class="modal-card">
+        <button class="modal-close" data-modal="site-qr-modal">&times;</button>
+        <div class="card-title">zoestrahammer.com</div>
+        <p style="color:var(--chrome-dim);margin-bottom:1rem;text-align:center;">Scan to see my links</p>
+        <div class="qr-placeholder">
+          <img src="img/zh.com_qr.svg" alt="zoestrahammer.com" />
         </div>
       </div>
     </div>
@@ -138,16 +150,35 @@
   </footer>
 
   <script>
-    // WeChat modal toggle
+    // --- Modal system (WeChat + Site QR) ---
+    const body = document.body;
+
+    function openModal(id) {
+      document.getElementById(id).classList.add('active');
+      body.classList.add('modal-open');
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.remove('active');
+      body.classList.remove('modal-open');
+    }
+
+    // Open triggers
     document.getElementById('wechat-btn').addEventListener('click', function(e) {
       e.preventDefault();
-      document.getElementById('wechat-modal').classList.add('active');
+      openModal('wechat-modal');
     });
-    document.getElementById('modal-close').addEventListener('click', function() {
-      document.getElementById('wechat-modal').classList.remove('active');
+    document.querySelector('.qr-foot-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      openModal('site-qr-modal');
     });
-    document.getElementById('wechat-modal').addEventListener('click', function(e) {
-      if (e.target === this) this.classList.remove('active');
+
+    // Close buttons & overlay clicks
+    document.querySelectorAll('.modal-close, .modal-overlay').forEach(function(el) {
+      el.addEventListener('click', function(e) {
+        if (e.target === el || el.classList.contains('modal-close')) {
+          closeModal(el.dataset.modal || el.id);
+        }
+      });
     });
   </script>
 

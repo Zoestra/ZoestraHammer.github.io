@@ -778,7 +778,7 @@ a:hover {
   position: fixed;
   inset: 0;
   z-index: 20000;
-  background: rgba(5, 5, 16, 0.88);
+  background: rgba(5, 5, 16, 0.92);
   backdrop-filter: blur(4px);
   align-items: center;
   justify-content: center;
@@ -820,13 +820,25 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 180px;
-  height: 180px;
   margin: 0 auto;
   border: 1px dashed var(--cyan-dim);
   color: var(--chrome-dim);
   font-family: var(--font-mono);
   font-size: 0.8rem;
+}
+.qr-placeholder img {
+  display: block;
+  max-width: 280px;
+  width: 100%;
+  height: auto;
+}
+
+/* Hide footer & dividers when any modal is active */
+body:has(.modal-overlay.active) .site-footer,
+body:has(.modal-overlay.active) .section-divider,
+body.modal-open .site-footer,
+body.modal-open .section-divider {
+  display: none;
 }
 
 /* ============================================================

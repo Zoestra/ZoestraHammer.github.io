@@ -133,9 +133,40 @@
     <div class="wrapper">
       <p>© 2026 Zoestra Hammer</p>
       <p style="margin-top:0.25rem;"><a href="gamejams.html">◄ Back to Game Jams</a></p>
-      <a class="qr-foot-btn" href="qrcode.html">[ QR ]</a>
+      <a class="qr-foot-btn" href="#" id="qr-foot-trigger">[ QR ]</a>
     </div>
   </footer>
+
+  <!-- Site QR Modal -->
+  <div class="modal-overlay" id="site-qr-modal">
+    <div class="modal-card">
+      <button class="modal-close" data-modal="site-qr-modal">&times;</button>
+      <div class="card-title">zoestrahammer.com</div>
+      <p style="color:var(--chrome-dim);margin-bottom:1rem;text-align:center;">Scan to see my links</p>
+      <div class="qr-placeholder">
+        <img src="img/zh.com_qr.svg" alt="Site QR" />
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var body = document.body;
+      document.getElementById('qr-foot-trigger').addEventListener('click', function(e) {
+        e.preventDefault();
+        document.getElementById('site-qr-modal').classList.add('active');
+        body.classList.add('modal-open');
+      });
+      document.querySelectorAll('.modal-close, .modal-overlay').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+          if (e.target === el || el.classList.contains('modal-close')) {
+            document.getElementById('site-qr-modal').classList.remove('active');
+            body.classList.remove('modal-open');
+          }
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>
