@@ -22,6 +22,7 @@
           <li><a href="worldbuilding-simulator.html" class="active">WBS</a></li>
           <li><a href="gamejams.html">Game Jams</a></li>
           <li><a href="music.html">Music</a></li>
+          <li><a href="resume.html">Resume</a></li>
         </ul>
       </nav>
     </div>
@@ -30,34 +31,131 @@
   <main>
     <div class="page-header">
       <h1 class="glitch" data-text="WORLD BUILDING SIMULATOR">WORLD BUILDING SIMULATOR</h1>
-      <p class="subtitle">Generate worlds. Break them. Write the myths.</p>
+      <p class="subtitle">Discover your world.</p>
     </div>
 
     <div class="wrapper">
 
-      <div class="card">
+      <!-- Project Overview -->
+      <div class="card card-prose">
         <div class="card-title">// project_overview</div>
         <p>
-          <strong>World Building Simulator</strong> is a tool for generating and
-          exploring fictional worlds. Procedural geography, culture simulation,
-          history generation — build a planet, then watch civilizations rise, trade,
-          war, and collapse across millennia.
+          <strong>Worldbuilding Simulator</strong> is a Fantasy Mapmaking tool
+          intended for Dungeonmasters and Authors who are creating planet-scale
+          worlds. It uses guided procedural generation to enable the creation of
+          3D worlds with rich terrain detail, climate simulation, and
+          geography-linked story information.
         </p>
-        <p>
-          More details coming soon. For now, check out
+        <p style="margin-top:1.5rem;">
+          To find the latest news and updates on this project, check out my
+          devlog at
           <a href="https://worldbuildingsimulator.com" target="_blank" rel="noopener">worldbuildingsimulator.com</a>.
         </p>
       </div>
 
-      <div class="card">
+      <!-- Features -->
+      <div class="card card-magenta card-prose">
+        <div class="card-title">// features</div>
+        <ul class="feature-list">
+          <li>
+            <strong>Draw on a globe, not a flat map.</strong>
+            Every other tool makes you draw in 2D and hope it wraps correctly.
+            WBS is globe-first. The poles behave like poles, and projections are
+            outputs, not inputs.
+          </li>
+          <li>
+            <strong>Tectonics simulation you control.</strong>
+            Draw continents, split them, set their motion vectors, run the
+            timeline forward. Watch continents collide, subduct, and split again.
+            Mountains form where the physics says they should, but you are always
+            in control.
+          </li>
+          <li>
+            <strong>Climate simulation that follows the terrain.</strong>
+            Wind, ocean currents, temperature, and rainfall are calculated from
+            your topography. Deserts form in rain shadows. Rainforests appear
+            where warm, wet air hits mountains. Biomes emerge from the
+            simulation, not from a brush.
+          </li>
+          <li>
+            <strong>Your edits always win.</strong>
+            Generated data never overwrites what you've drawn. Move a river,
+            redraw a coastline, nudge a mountain range — the simulation
+            recalculates around your changes. You're the author, not a
+            spectator.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Origin Story -->
+      <div class="card card-prose">
+        <div class="card-title">// worldbuilding_simulator</div>
+        <p>
+          Worldbuilding Simulator is a solution born of a deeply felt problem.
+          Before it was my Senior Capstone project, it was a little idea
+          floating in the back of my head during my 200 hours of suffering with
+          GPlates. The idea was simple: "what if using this tool didn't suck so
+          much". I was building my fantasy world, Zandralor, from the ground up,
+          following the wonderful example of
+          <a href="https://worldbuildingpasta.blogspot.com" target="_blank" rel="noopener">Worldbuilding Pasta</a>.
+          Unfortunately, due to the lack of a specialized tool for this kind of
+          worldbuilding, the creation of Zandralor stretched across GPlates (an
+          academic plate tectonics tool), Blender, Inkscape, Wonderdraft, and an
+          online climate simulation tool. Each of these software tools offered a
+          piece of the puzzle, but there was no tool that could bring it all
+          together and make one seamless experience for worldbuilding and
+          planetary design.
+        </p>
+        <p>
+          Worldbuilding Simulator is my attempt to solve this problem. The
+          vision for WBS is to be one singular program that can stay with you
+          from creating the map to developing your campaign or story, providing
+          tools every step of the way.
+        </p>
+      </div>
+
+      <!-- The Vision -->
+      <div class="card card-magenta card-prose">
+        <div class="card-title">// the_vision</div>
+        <p>
+          You start with a blank globe. You draw some continents. You split
+          them, watch them move apart, control their motion, and smash them
+          together. Once you are satisfied, you step back and watch the
+          simulators work. Mountains rise and fill with ore. Rain falls,
+          creating rivers which carve out great canyons and deposit sediment.
+          Seasons pass, weather changes, and climate biomes emerge.
+        </p>
+        <p>
+          Once time has run its course, you zoom in, and you're not designing
+          anymore. You begin to <em>explore</em> this new world. What started as
+          a process of defining the broad scope turns into the discovery of
+          small, unplanned details. Rough brushstrokes reveal the intricate
+          traces of each brush hair.
+        </p>
+        <p>
+          You're no longer a cartographer charting every line — you're an
+          explorer discovering a new world with new stories to tell.
+        </p>
+      </div>
+    <!-- Signature -->
+    <div class="wrapper" style="text-align:center;margin-top:3rem;margin-bottom:3rem;">
+      <p class="glitch" data-text="Discover your world." style="font-size:2rem;margin-bottom:1.2rem;">Discover your world.</p>
+      <p style="font-family:var(--font-display);font-size:1.4rem;letter-spacing:0.12em;text-transform:uppercase;">
+        <a href="https://worldbuildingsimulator.com" target="_blank" rel="noopener" class="neon-cyan">worldbuildingsimulator.com</a>
+      </p>
+    </div>
+
+
+      <!-- Status -->
+      <div class="card card-prose">
         <div class="card-title">// status</div>
         <div class="terminal" style="max-width:100%;">
           <span class="prompt">wbs --status</span><br>
-          <span style="color:var(--yellow);">[WIP]</span> Core simulation engine in development...<br>
-          <span style="color:var(--green);">[OK]</span> Terrain generation module: stable<br>
-          <span style="color:var(--yellow);">[WIP]</span> Civilization AI: training phase<br>
-          <span style="color:var(--chrome-dim);">[TODO]</span> Mythography engine: planned<br>
-          <span style="color:var(--chrome-dim);">[TODO]</span> Web interface: planned
+          <span style="color:var(--yellow);">[WIP]</span> Mythography engine: reloading<br>
+          <span style="color:var(--green);">[OK]</span> Polygon-Vertex Shader Pipeline: stable<br>
+          <span style="color:var(--magenta);">[ALERT]</span> Terrain generation module: ERROR<br>
+          <span style="color:var(--chrome-dim);">[TODO]</span> Civilization Simulator: planned<br>
+          <span style="color:var(--chrome-dim);">[TODO]</span> Web interface: on roadmap
         </div>
       </div>
 
