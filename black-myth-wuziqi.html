@@ -1,176 +1,228 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Black Myth: Wuziqi — Zoestra Hammer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png" />
-  <link rel="manifest" href="img/favicon_io/site.webmanifest" />
-</head>
-<body>
-
-  <header class="nav-bar">
-    <div class="wrapper">
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="worldbuilding-simulator.html">WBS</a></li>
-          <li><a href="gamejams.html" class="active">Game Jams</a></li>
-          <li><a href="resume.html">Resume</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <div class="wrapper" style="padding-top:2rem;">
-
-      <a href="gamejams.html" class="back-link">All Game Jams</a>
-
-      <div class="page-header" style="padding-top:1rem;">
-        <h1 class="glitch" data-text="BLACK MYTH: WUZIQI">BLACK MYTH: WUZIQI</h1>
-        <p class="subtitle">Gomoku. Powerups. Chaos.</p>
-      </div>
-
-      <div style="text-align:center;margin-bottom:2rem;">
-        <span class="tag">Game Jam</span>
-        <span class="tag tag-magenta">Strategy</span>
-        <span class="tag tag-yellow">Powerups</span>
-        <span class="tag">2D</span>
-      </div>
-
-      <!-- Overview -->
-      <div class="card card-prose">
-        <div class="card-title">// project_overview</div>
-        <p>
-          <strong>Black Myth: Wuziqi</strong> takes the classic Chinese board game
-          of Gomoku (五子棋) and cranks it up with powerup mechanics. It's still
-          five in a row — but now every few turns you can drop a special stone that
-          clears a line, blocks your opponent, or reshuffles the board.
-        </p>
-        <p>
-          Wrapped in a dark fantasy aesthetic inspired by <em>Black Myth: Wukong</em>,
-          each match feels like a duel on a sacred mountain. The rules are simple.
-          The powerups are not.
-        </p>
-      </div>
-
-      <!-- Screenshot 01 -->
-      <div class="card card-prose">
-        <div class="card-title">// screenshot: WUZIQI_01</div>
-        <div class="framed-media">
-          <img src="GameJams/Black_Myth_Wuziqi/BMWuZiQi_01.png" alt="Black Myth Wuziqi — Screenshot 1" loading="lazy" />
-        </div>
-        <p class="media-caption">[ Title for Screenshot 1 ]</p>
-        <div class="media-body">
-          <p>Replace this text with a description of this screenshot — what's happening on screen, what feature or moment it captures.</p>
-        </div>
-      </div>
-
-      <!-- Screenshot 02 -->
-      <div class="card card-prose">
-        <div class="card-title">// screenshot: WUZIQI_02</div>
-        <div class="framed-media">
-          <img src="GameJams/Black_Myth_Wuziqi/BMWuZiQi_02.png" alt="Black Myth Wuziqi — Screenshot 2" loading="lazy" />
-        </div>
-        <p class="media-caption">[ Title for Screenshot 2 ]</p>
-        <div class="media-body">
-          <p>Replace this text with a description of this screenshot.</p>
-        </div>
-      </div>
-
-      <!-- Screenshot 03 -->
-      <div class="card card-prose">
-        <div class="card-title">// screenshot: WUZIQI_03</div>
-        <div class="framed-media">
-          <img src="GameJams/Black_Myth_Wuziqi/BMWuZiQi_03.png" alt="Black Myth Wuziqi — Screenshot 3" loading="lazy" />
-        </div>
-        <p class="media-caption">[ Title for Screenshot 3 ]</p>
-        <div class="media-body">
-          <p>Replace this text with a description of this screenshot.</p>
-        </div>
-      </div>
-
-      <!-- Screenshot 04 -->
-      <div class="card card-prose">
-        <div class="card-title">// screenshot: WUZIQI_04</div>
-        <div class="framed-media">
-          <img src="GameJams/Black_Myth_Wuziqi/BMWuZiQi_04.png" alt="Black Myth Wuziqi — Screenshot 4" loading="lazy" />
-        </div>
-        <p class="media-caption">[ Title for Screenshot 4 ]</p>
-        <div class="media-body">
-          <p>Replace this text with a description of this screenshot.</p>
-        </div>
-      </div>
-
-      <!-- Credits -->
-      <div class="card card-magenta card-prose">
-        <div class="card-title">// credits</div>
-        <p>
-          <strong>Role:</strong> Game Designer, Artist, Developer<br>
-          <strong>Genre:</strong> Strategy / Board Game<br>
-          <strong>Platform:</strong> TBD<br>
-          <strong>Status:</strong> Game Jam Prototype
-        </p>
-        <div class="terminal" style="margin-top:1rem;">
-          <span class="prompt">load BM_Wuziqi.exe</span><br>
-          <span style="color:var(--green);">[OK]</span> Black Myth: Wuziqi v0.1.0<br>
-          <span style="color:var(--green);">[OK]</span> Powerup system online<br>
-          <span style="color:var(--yellow);">[WARN]</span> Five in a row is just the beginning...
-        </div>
-      </div>
-
-    </div>
-
-    <div class="status-bar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Black Myth: Wuziqi — Zoestra Hammer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon_io/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon_io/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="img/favicon_io/site.webmanifest" />
+  </head>
+  <body>
+    <header class="nav-bar">
       <div class="wrapper">
-        <span class="blink">█</span> PROJECT: BLACK_MYTH_WUZIQI &mdash; STATUS: PROTOTYPE
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="worldbuilding-simulator.html">WBS</a></li>
+            <li><a href="gamejams.html" class="active">Game Jams</a></li>
+            <li><a href="resume.html">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper" style="padding-top: 2rem">
+        <a href="gamejams.html" class="back-link">All Game Jams</a>
+
+        <div class="page-header" style="padding-top: 1rem">
+          <h1 class="glitch" data-text="BLACK MYTH: WUZIQI">
+            BLACK MYTH: WUZIQI
+          </h1>
+          <p class="subtitle">Gomoku. Powerups. Chaos.</p>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 2rem">
+          <span class="tag">Game Jam</span>
+          <span class="tag tag-magenta">Strategy</span>
+          <span class="tag tag-yellow">Powerups</span>
+          <span class="tag">2D</span>
+        </div>
+
+        <!-- Overview -->
+        <div class="card card-prose">
+          <div class="card-title">// project_overview</div>
+          <p>
+            <strong>Black Myth: Wuziqi</strong> takes the classic Chinese board
+            game of Gomoku (五子棋) and cranks it up with powerup mechanics.
+            It's still five in a row — but now every few turns you can drop a
+            special stone that clears a line, blocks your opponent, or
+            reshuffles the board.
+          </p>
+          <p>
+            Wrapped in a dark fantasy aesthetic inspired by
+            <em>Black Myth: Wukong</em>, each match feels like a duel on a
+            sacred mountain. The rules are simple. The powerups are not.
+          </p>
+        </div>
+
+        <!-- Screenshot 01 -->
+        <div class="card card-prose">
+          <div class="card-title">// screenshot: WUZIQI_01</div>
+          <div class="framed-media">
+            <img
+              src="GameJams/Black_Myth_Wuziqi/BMWuZiQi_01.png"
+              alt="Black Myth Wuziqi — Screenshot 1"
+              loading="lazy"
+            />
+          </div>
+          <p class="media-caption">[ Title for Screenshot 1 ]</p>
+          <div class="media-body">
+            <p>
+              Replace this text with a description of this screenshot — what's
+              happening on screen, what feature or moment it captures.
+            </p>
+          </div>
+        </div>
+
+        <!-- Screenshot 02 -->
+        <div class="card card-prose">
+          <div class="card-title">// screenshot: WUZIQI_02</div>
+          <div class="framed-media">
+            <img
+              src="GameJams/Black_Myth_Wuziqi/BMWuZiQi_02.png"
+              alt="Black Myth Wuziqi — Screenshot 2"
+              loading="lazy"
+            />
+          </div>
+          <p class="media-caption">[ Title for Screenshot 2 ]</p>
+          <div class="media-body">
+            <p>Replace this text with a description of this screenshot.</p>
+          </div>
+        </div>
+
+        <!-- Screenshot 03 -->
+        <div class="card card-prose">
+          <div class="card-title">// screenshot: WUZIQI_03</div>
+          <div class="framed-media">
+            <img
+              src="GameJams/Black_Myth_Wuziqi/BMWuZiQi_03.png"
+              alt="Black Myth Wuziqi — Screenshot 3"
+              loading="lazy"
+            />
+          </div>
+          <p class="media-caption">[ Title for Screenshot 3 ]</p>
+          <div class="media-body">
+            <p>Replace this text with a description of this screenshot.</p>
+          </div>
+        </div>
+
+        <!-- Screenshot 04 -->
+        <div class="card card-prose">
+          <div class="card-title">// screenshot: WUZIQI_04</div>
+          <div class="framed-media">
+            <img
+              src="GameJams/Black_Myth_Wuziqi/BMWuZiQi_04.png"
+              alt="Black Myth Wuziqi — Screenshot 4"
+              loading="lazy"
+            />
+          </div>
+          <p class="media-caption">[ Title for Screenshot 4 ]</p>
+          <div class="media-body">
+            <p>Replace this text with a description of this screenshot.</p>
+          </div>
+        </div>
+
+        <!-- Credits -->
+        <div class="card card-magenta card-prose">
+          <div class="card-title">// credits</div>
+          <p>
+            <strong>Role:</strong> Game Designer, Artist, Developer<br />
+            <strong>Genre:</strong> Strategy / Board Game<br />
+            <strong>Platform:</strong> TBD<br />
+            <strong>Status:</strong> Game Jam Prototype
+          </p>
+          <div class="terminal" style="margin-top: 1rem">
+            <span class="prompt">load BM_Wuziqi.exe</span><br />
+            <span style="color: var(--green)">[OK]</span> Black Myth: Wuziqi
+            v0.1.0<br />
+            <span style="color: var(--green)">[OK]</span> Powerup system
+            online<br />
+            <span style="color: var(--yellow)">[WARN]</span> Five in a row is
+            just the beginning...
+          </div>
+        </div>
+      </div>
+
+      <div class="status-bar">
+        <div class="wrapper">
+          <span class="blink">█</span> PROJECT: BLACK_MYTH_WUZIQI &mdash;
+          STATUS: PROTOTYPE
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+        <p>© 2026 Zoestra Hammer</p>
+        <p style="margin-top: 0.25rem">
+          <a href="gamejams.html">◄ Back to Game Jams</a>
+        </p>
+        <a class="qr-foot-btn" href="#" id="qr-foot-trigger">[ QR ]</a>
+      </div>
+    </footer>
+
+    <!-- Site QR Modal -->
+    <div class="modal-overlay" id="site-qr-modal">
+      <div class="modal-card">
+        <button class="modal-close" data-modal="site-qr-modal">&times;</button>
+        <div class="card-title">zoestrahammer.com</div>
+        <p
+          style="
+            color: var(--chrome-dim);
+            margin-bottom: 1rem;
+            text-align: center;
+          "
+        >
+          Scan to see my links
+        </p>
+        <div class="qr-placeholder">
+          <img src="img/zh.com_qr.svg" alt="Site QR" />
+        </div>
       </div>
     </div>
-  </main>
 
-  <footer class="site-footer">
-    <div class="wrapper">
-      <p>© 2026 Zoestra Hammer</p>
-      <p style="margin-top:0.25rem;"><a href="gamejams.html">◄ Back to Game Jams</a></p>
-      <a class="qr-foot-btn" href="#" id="qr-foot-trigger">[ QR ]</a>
-    </div>
-  </footer>
-
-  <!-- Site QR Modal -->
-  <div class="modal-overlay" id="site-qr-modal">
-    <div class="modal-card">
-      <button class="modal-close" data-modal="site-qr-modal">&times;</button>
-      <div class="card-title">zoestrahammer.com</div>
-      <p style="color:var(--chrome-dim);margin-bottom:1rem;text-align:center;">Scan to see my links</p>
-      <div class="qr-placeholder">
-        <img src="img/zh.com_qr.svg" alt="Site QR" />
-      </div>
-    </div>
-  </div>
-
-  <script>
-    (function() {
-      var body = document.body;
-      document.getElementById('qr-foot-trigger').addEventListener('click', function(e) {
-        e.preventDefault();
-        document.getElementById('site-qr-modal').classList.add('active');
-        body.classList.add('modal-open');
-      });
-      document.querySelectorAll('.modal-close, .modal-overlay').forEach(function(el) {
-        el.addEventListener('click', function(e) {
-          if (e.target === el || el.classList.contains('modal-close')) {
-            document.getElementById('site-qr-modal').classList.remove('active');
-            body.classList.remove('modal-open');
-          }
-        });
-      });
-    })();
-  </script>
-
-</body>
+    <script>
+      (function () {
+        var body = document.body;
+        document
+          .getElementById("qr-foot-trigger")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            document.getElementById("site-qr-modal").classList.add("active");
+            body.classList.add("modal-open");
+          });
+        document
+          .querySelectorAll(".modal-close, .modal-overlay")
+          .forEach(function (el) {
+            el.addEventListener("click", function (e) {
+              if (e.target === el || el.classList.contains("modal-close")) {
+                document
+                  .getElementById("site-qr-modal")
+                  .classList.remove("active");
+                body.classList.remove("modal-open");
+              }
+            });
+          });
+      })();
+    </script>
+  </body>
 </html>
