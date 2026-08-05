@@ -1,221 +1,291 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Unfinished Eldritch Game — Zoestra Hammer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png" />
-  <link rel="manifest" href="img/favicon_io/site.webmanifest" />
-</head>
-<body>
-
-  <header class="nav-bar">
-    <div class="wrapper">
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="worldbuilding-simulator.html">WBS</a></li>
-          <li><a href="gamejams.html" class="active">Game Jams</a></li>
-          <li><a href="resume.html">Resume</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <div class="wrapper" style="padding-top:2rem;">
-
-      <a href="gamejams.html" class="back-link">All Game Jams</a>
-
-      <div class="page-header" style="padding-top:1rem;">
-        <h1 class="glitch" data-text="UNFINISHED ELDRITCH GAME">UNFINISHED ELDRITCH GAME</h1>
-        <p class="subtitle">You are the monster. Destroy everything.</p>
-      </div>
-
-      <div style="text-align:center;margin-bottom:2rem;">
-        <span class="tag tag-magenta">Character Design</span>
-        <span class="tag tag-green">3D Modelling</span>
-        <span class="tag">Game Design</span>
-      </div>
-
-      <div class="card">
-        <div class="card-title">// project_overview</div>
-        <p>
-          <strong>Unfinished Eldritch Game</strong> is an arcade-style shoot-em-up
-          where you play as a giant eldritch monster on a rampage. To advance, you
-          must spread your corruption as far as possible. While in the corruption
-          spread, you deal more damage, regenerate health, and can dive into the
-          corruption to move quickly and avoid damage.
-        </p>
-        <p>
-          Unfinished Eldritch Game was made as part of the
-          <a href="https://itch.io/jam/pirate14" target="_blank" rel="noopener">Pirate Software Game Jam 14</a>.
-          The theme was "Its Spreading". We chose a literal interpretation of the
-          theme, and created a mechanic where you must spread your corruption,
-          similar to the Zerg's Creep from Starcraft. Certain attacks would create
-          patches of corruption, and by channeling an ability, you can cause the
-          spread of the creep to accelerate.
-        </p>
-        <p>
-          Unfortunately, Unfinished Eldritch Game did not make it across the finish
-          line during the jam. We were beset with problems from the start. The Jam's
-          rules specified teams of 5, in the first few days of work, 2 of our team
-          members caught COVID and could not complete the Jam. A third teammate was
-          in and out of the hospital during the whole 2 week period due to chronic
-          health issues, which meant his time to work on the project was extremely
-          limited.
-        </p>
-        <p>
-          Despite the difficulties, we successfully created a basic prototype, with
-          the core character movement and attack logic, as well as basic NPC
-          movement.
-        </p>
-        <p>
-          My task during this Jam was the Character design. I spent my time in
-          Blender and Unreal, modelling, rigging, and animating the main character,
-          "Squidboi". I used an Inverse Kinematics library for Unity to procedurally
-          animate his tentacles, allowing them to react to the environment and
-          simplifying process of animating his attacks.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-title">// render: SQUIDBOI_TPOSE</div>
-        <div class="framed-media">
-          <img src="GameJams/Unfinished_Eldritch_Game/squidboi_tpose.png" alt="Squidboi T-pose render" loading="lazy" />
-        </div>
-        <p class="media-caption">[ Squidboi — T-Pose Reference ]</p>
-        <div class="media-body">
-          <p>The basic Squidboi model.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">// render: SQUIDBOI_POSED</div>
-        <div class="framed-media">
-          <img src="GameJams/Unfinished_Eldritch_Game/squidboi_posed.png" alt="Squidboi posed render" loading="lazy" />
-        </div>
-        <p class="media-caption">[ Squidboi — Posed ]</p>
-        <div class="media-body">
-          <p>Squidboi in a manually-created pose.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">// animation: SQUIDBOI_IDLE</div>
-        <div class="framed-media">
-          <img src="GameJams/Unfinished_Eldritch_Game/squidboi.gif" alt="Squidboi idle animation" loading="lazy" />
-        </div>
-        <p class="media-caption">[ Squidboi — Idle Animation ]</p>
-        <div class="media-body">
-          <p>Idle animation.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">// animation: SQUIDBOI_MANY_TENTACLES</div>
-        <div class="framed-media">
-          <img src="GameJams/Unfinished_Eldritch_Game/squidboi_many_tent.gif" alt="Squidboi many tentacles animation" loading="lazy" />
-        </div>
-        <p class="media-caption">[ Squidboi — Tentacle Attack ]</p>
-        <div class="media-body">
-          <p>Attack animations were created by programatically moving the IK targets to the location of the attack.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">// animation: CREEP</div>
-        <div class="framed-media">
-          <img src="GameJams/Unfinished_Eldritch_Game/Creep.gif" alt="Creep animation" loading="lazy" />
-        </div>
-        <p class="media-caption">[ Creep Animation ]</p>
-        <div class="media-body">
-          <p>Replace this text with a description of this animation.</p>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">// media: GAMEPLAY</div>
-        <div class="framed-media">
-          <video controls preload="metadata" poster="GameJams/Unfinished_Eldritch_Game/squidboi_posed.png">
-            <source src="GameJams/Unfinished_Eldritch_Game/EldritchSplatoon.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        </div>
-        <p class="media-caption">[ Gameplay Footage ]</p>
-        <div class="media-body">
-          <p>Replace this text with a description of the gameplay footage.</p>
-        </div>
-      </div>
-
-      <div class="card card-magenta card-prose">
-        <div class="card-title">// credits</div>
-        <p>
-          <strong>Role:</strong> Game Designer, 3D Artist, Developer<br>
-          <strong>Genre:</strong> Arcade / Shoot-em-up<br>
-          <strong>Platform:</strong> TBD<br>
-          <strong>Status:</strong> Unfinished — Game Jam Prototype
-        </p>
-        <div class="terminal" style="margin-top:1rem;">
-          <span class="prompt">summon squidboi.exe</span><br>
-          <span style="color:var(--green);">[OK]</span> Tentacle physics online<br>
-          <span style="color:var(--green);">[OK]</span> City demolition engine ready<br>
-          <span style="color:var(--magenta);">[CRIT]</span> Collateral damage — INTENDED<br>
-          <span style="color:var(--chrome-dim);">Rampage initiated. Targets: all of them.</span>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="status-bar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unfinished Eldritch Game — Zoestra Hammer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon_io/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon_io/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="img/favicon_io/site.webmanifest" />
+  </head>
+  <body>
+    <header class="nav-bar">
       <div class="wrapper">
-        <span class="blink">█</span> PROJECT: ELDRITCH_GAME &mdash; STATUS: UNFINISHED &mdash; DESTRUCTION: 100%
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="worldbuilding-simulator.html">WBS</a></li>
+            <li><a href="gamejams.html" class="active">Game Jams</a></li>
+            <li><a href="resume.html">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper" style="padding-top: 2rem">
+        <a href="gamejams.html" class="back-link">All Game Jams</a>
+
+        <div class="page-header" style="padding-top: 1rem">
+          <h1 class="glitch" data-text="UNFINISHED ELDRITCH GAME">
+            UNFINISHED ELDRITCH GAME
+          </h1>
+          <p class="subtitle">You are the monster. Destroy everything.</p>
+        </div>
+
+        <div style="text-align: center; margin-bottom: 2rem">
+          <span class="tag tag-magenta">Character Design</span>
+          <span class="tag tag-green">3D Modelling</span>
+          <span class="tag">Game Design</span>
+        </div>
+
+        <div class="card">
+          <div class="card-title">// project_overview</div>
+          <p>
+            <strong>Unfinished Eldritch Game</strong> is an arcade-style
+            shoot-em-up where you play as a giant eldritch monster on a rampage.
+            To advance, you must spread your corruption as far as possible.
+            While in the corruption spread, you deal more damage, regenerate
+            health, and can dive into the corruption to move quickly and avoid
+            damage.
+          </p>
+          <p>
+            Unfinished Eldritch Game was made as part of the
+            <a
+              href="https://itch.io/jam/pirate14"
+              target="_blank"
+              rel="noopener"
+              >Pirate Software Game Jam 14</a
+            >. The theme was "Its Spreading". We chose a literal interpretation
+            of the theme, and created a mechanic where you must spread your
+            corruption, similar to the Zerg's Creep from Starcraft. Certain
+            attacks would create patches of corruption, and by channeling an
+            ability, you can cause the spread of the creep to accelerate.
+          </p>
+          <p>
+            Unfortunately, Unfinished Eldritch Game did not make it across the
+            finish line during the jam. We were beset with problems from the
+            start. The Jam's rules specified teams of 5, in the first few days
+            of work, 2 of our team members caught COVID and could not complete
+            the Jam. A third teammate was in and out of the hospital during the
+            whole 2 week period due to chronic health issues, which meant his
+            time to work on the project was extremely limited.
+          </p>
+          <p>
+            Despite the difficulties, we successfully created a basic prototype,
+            with the core character movement and attack logic, as well as basic
+            NPC movement.
+          </p>
+          <p>
+            My task during this Jam was the Character design. I spent my time in
+            Blender and Unreal, modelling, rigging, and animating the main
+            character, "Squidboi". I used an Inverse Kinematics library for
+            Unity to procedurally animate his tentacles, allowing them to react
+            to the environment and simplifying process of animating his attacks.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-title">// render: SQUIDBOI_TPOSE</div>
+          <div class="framed-media">
+            <img
+              src="GameJams/Unfinished_Eldritch_Game/squidboi_tpose.png"
+              alt="Squidboi T-pose render"
+              loading="lazy"
+            />
+          </div>
+          <p class="media-caption">[ Squidboi — T-Pose Reference ]</p>
+          <div class="media-body">
+            <p>The basic Squidboi model.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">// render: SQUIDBOI_POSED</div>
+          <div class="framed-media">
+            <img
+              src="GameJams/Unfinished_Eldritch_Game/squidboi_posed.png"
+              alt="Squidboi posed render"
+              loading="lazy"
+            />
+          </div>
+          <p class="media-caption">[ Squidboi — Posed ]</p>
+          <div class="media-body">
+            <p>Squidboi in a manually-created pose.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">// animation: SQUIDBOI_IDLE</div>
+          <div class="framed-media">
+            <img
+              src="GameJams/Unfinished_Eldritch_Game/squidboi.gif"
+              alt="Squidboi idle animation"
+              loading="lazy"
+            />
+          </div>
+          <p class="media-caption">
+            [ Squidboi — Tentacle Inverse Kinematics Demonstration ]
+          </p>
+          <div class="media-body">
+            <p>Initial demonstration of character IK</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">// animation: SQUIDBOI_MANY_TENTACLES</div>
+          <div class="framed-media">
+            <img
+              src="GameJams/Unfinished_Eldritch_Game/squidboi_many_tent.gif"
+              alt="Squidboi many tentacles animation"
+              loading="lazy"
+            />
+          </div>
+          <p class="media-caption">
+            [ Squidboi — Tentacle Inverse Kinematics Demonstration ]
+          </p>
+          <div class="media-body">
+            <p>Character IK shown interacting with environment</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">// animation: CREEP</div>
+          <div class="framed-media">
+            <img
+              src="GameJams/Unfinished_Eldritch_Game/Creep.gif"
+              alt="Creep animation"
+              loading="lazy"
+            />
+          </div>
+          <p class="media-caption">[ Creep Animation ]</p>
+          <div class="media-body">
+            <p>Visualization of the Creep mechanic</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">// media: GAMEPLAY</div>
+          <div class="framed-media">
+            <video
+              controls
+              preload="metadata"
+              poster="GameJams/Unfinished_Eldritch_Game/squidboi_posed.png"
+            >
+              <source
+                src="GameJams/Unfinished_Eldritch_Game/EldritchSplatoon.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p class="media-caption">[ Gameplay Footage ]</p>
+          <div class="media-body">
+            <p>Demonstration of basic mechanics in test level.</p>
+          </div>
+        </div>
+
+        <div class="card card-magenta card-prose">
+          <div class="card-title">// credits</div>
+          <p>
+            <strong>Role:</strong> Game Designer, 3D Artist, Developer<br />
+            <strong>Genre:</strong> Arcade / Shoot-em-up<br />
+            <strong>Platform:</strong> TBD<br />
+            <strong>Status:</strong> Unfinished — Game Jam Prototype
+          </p>
+          <div class="terminal" style="margin-top: 1rem">
+            <span class="prompt">summon squidboi.exe</span><br />
+            <span style="color: var(--green)">[OK]</span> Tentacle physics
+            online<br />
+            <span style="color: var(--green)">[OK]</span> City demolition engine
+            ready<br />
+            <span style="color: var(--magenta)">[CRIT]</span> Collateral damage
+            — INTENDED<br />
+            <span style="color: var(--chrome-dim)"
+              >Rampage initiated. Targets: all of them.</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="status-bar">
+        <div class="wrapper">
+          <span class="blink">█</span> PROJECT: ELDRITCH_GAME &mdash; STATUS:
+          UNFINISHED &mdash; DESTRUCTION: 0%
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrapper">
+        <p>© 2026 Zoestra Hammer</p>
+        <p style="margin-top: 0.25rem">
+          <a href="gamejams.html">◄ Back to Game Jams</a>
+        </p>
+        <a class="qr-foot-btn" href="#" id="qr-foot-trigger">[ QR ]</a>
+      </div>
+    </footer>
+
+    <!-- Site QR Modal -->
+    <div class="modal-overlay" id="site-qr-modal">
+      <div class="modal-card">
+        <button class="modal-close" data-modal="site-qr-modal">&times;</button>
+        <div class="card-title">zoestrahammer.com</div>
+        <p
+          style="
+            color: var(--chrome-dim);
+            margin-bottom: 1rem;
+            text-align: center;
+          "
+        >
+          Scan to see my links
+        </p>
+        <div class="qr-placeholder">
+          <img src="img/zh.com_qr.svg" alt="Site QR" />
+        </div>
       </div>
     </div>
-  </main>
 
-  <footer class="site-footer">
-    <div class="wrapper">
-      <p>© 2026 Zoestra Hammer</p>
-      <p style="margin-top:0.25rem;"><a href="gamejams.html">◄ Back to Game Jams</a></p>
-      <a class="qr-foot-btn" href="#" id="qr-foot-trigger">[ QR ]</a>
-    </div>
-  </footer>
-
-  <!-- Site QR Modal -->
-  <div class="modal-overlay" id="site-qr-modal">
-    <div class="modal-card">
-      <button class="modal-close" data-modal="site-qr-modal">&times;</button>
-      <div class="card-title">zoestrahammer.com</div>
-      <p style="color:var(--chrome-dim);margin-bottom:1rem;text-align:center;">Scan to see my links</p>
-      <div class="qr-placeholder">
-        <img src="img/zh.com_qr.svg" alt="Site QR" />
-      </div>
-    </div>
-  </div>
-
-  <script>
-    (function() {
-      var body = document.body;
-      document.getElementById('qr-foot-trigger').addEventListener('click', function(e) {
-        e.preventDefault();
-        document.getElementById('site-qr-modal').classList.add('active');
-        body.classList.add('modal-open');
-      });
-      document.querySelectorAll('.modal-close, .modal-overlay').forEach(function(el) {
-        el.addEventListener('click', function(e) {
-          if (e.target === el || el.classList.contains('modal-close')) {
-            document.getElementById('site-qr-modal').classList.remove('active');
-            body.classList.remove('modal-open');
-          }
-        });
-      });
-    })();
-  </script>
-
-</body>
+    <script>
+      (function () {
+        var body = document.body;
+        document
+          .getElementById("qr-foot-trigger")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+            document.getElementById("site-qr-modal").classList.add("active");
+            body.classList.add("modal-open");
+          });
+        document
+          .querySelectorAll(".modal-close, .modal-overlay")
+          .forEach(function (el) {
+            el.addEventListener("click", function (e) {
+              if (e.target === el || el.classList.contains("modal-close")) {
+                document
+                  .getElementById("site-qr-modal")
+                  .classList.remove("active");
+                body.classList.remove("modal-open");
+              }
+            });
+          });
+      })();
+    </script>
+  </body>
 </html>
