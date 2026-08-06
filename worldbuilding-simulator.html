@@ -1,194 +1,265 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>World Building Simulator — Zoestra Hammer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon_io/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon_io/favicon-16x16.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon_io/apple-touch-icon.png" />
-  <link rel="manifest" href="img/favicon_io/site.webmanifest" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>World Building Simulator — Zoestra Hammer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="img/favicon_io/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon_io/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/favicon_io/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="img/favicon_io/site.webmanifest" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header class="nav-bar">
+      <div class="wrapper">
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="worldbuilding-simulator.html" class="active">WBS</a>
+            </li>
+            <li><a href="gamejams.html">Game Jams</a></li>
+            <li><a href="resume.html">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-  <!-- Navigation -->
-  <header class="nav-bar">
-    <div class="wrapper">
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="worldbuilding-simulator.html" class="active">WBS</a></li>
-          <li><a href="gamejams.html">Game Jams</a></li>
-          <li><a href="resume.html">Resume</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <div class="page-header">
-      <h1 class="glitch" data-text="WORLD BUILDING SIMULATOR">WORLD BUILDING SIMULATOR</h1>
-      <p class="subtitle">Discover your world.</p>
-    </div>
-
-    <div class="wrapper">
-
-      <!-- Project Overview -->
-      <div class="card card-prose">
-        <div class="card-title">// project_overview</div>
-        <p>
-          <strong>Worldbuilding Simulator</strong> is a Fantasy Mapmaking tool
-          intended for Dungeonmasters and Authors who are creating planet-scale
-          worlds. It uses guided procedural generation to enable the creation of
-          3D worlds with rich terrain detail, climate simulation, and
-          geography-linked story information.
-        </p>
-        <p style="margin-top:1.5rem;">
-          To find the latest news and updates on this project, check out my
-          devlog at
-          <a href="https://worldbuildingsimulator.com" target="_blank" rel="noopener">worldbuildingsimulator.com</a>.
-        </p>
+    <main>
+      <div class="page-header">
+        <h1 class="glitch" data-text="WORLD BUILDING SIMULATOR">
+          WORLD BUILDING SIMULATOR
+        </h1>
+        <p class="subtitle">Discover your world.</p>
       </div>
 
-      <!-- Origin Story -->
-      <div class="card card-prose">
-        <div class="card-title">// worldbuilding_simulator</div>
-        <p>
-          Worldbuilding Simulator is a solution born of a deeply felt problem.
-          Before it was my Senior Capstone project, it was a little idea
-          floating in the back of my head during my 200 hours of suffering with
-          GPlates. The idea was simple: "what if using this tool didn't suck so
-          much". I was building my fantasy world, Zandralor, from the ground up,
-          following the wonderful example of
-          <a href="https://worldbuildingpasta.blogspot.com" target="_blank" rel="noopener">Worldbuilding Pasta</a>.
-          Unfortunately, due to the lack of a specialized tool for this kind of
-          worldbuilding, the creation of Zandralor stretched across GPlates (an
-          academic plate tectonics tool), Blender, Inkscape, Wonderdraft, and an
-          online climate simulation tool. Each of these software tools offered a
-          piece of the puzzle, but there was no tool that could bring it all
-          together and make one seamless experience for worldbuilding and
-          planetary design.
-        </p>
-        <p>
-          Worldbuilding Simulator is my attempt to solve this problem. The
-          vision for WBS is to be one singular program that can stay with you
-          from creating the map to developing your campaign or story, providing
-          tools every step of the way.
-        </p>
-      </div>
+      <div class="wrapper">
+        <!-- Project Overview -->
+        <div class="card card-prose">
+          <div class="card-title">// project_overview</div>
+          <p>
+            <strong>Worldbuilding Simulator</strong> is a Fantasy Mapmaking tool
+            intended for Dungeonmasters and Authors who are creating
+            planet-scale worlds. It uses guided procedural generation to create
+            3D worlds with rich terrain detail, climate simulation, and
+            geography-linked story information.
+          </p>
+          <p>
+            The goal of Worldbuilding Simulator is to let worldbuilders have a
+            high level of control over their creations, while also allowing them
+            to have a sense of discovery within their world. To find the latest
+            news and updates, check out my devlog at
+            <a
+              href="https://worldbuildingsimulator.com"
+              target="_blank"
+              rel="noopener"
+              >worldbuildingsimulator.com</a
+            >.
+          </p>
+        </div>
 
-      <!-- Features -->
-      <div class="card card-magenta card-prose">
-        <div class="card-title">// features</div>
-        <ul class="feature-list">
-          <li>
-            <strong>Draw on a globe, not a flat map.</strong>
-            Every other tool makes you draw in 2D and hope it wraps correctly.
-            WBS is globe-first. The poles behave like poles, and projections are
-            outputs, not inputs.
-          </li>
-          <li>
-            <strong>Tectonics simulation you control.</strong>
-            Draw continents, split them, set their motion vectors, run the
-            timeline forward. Watch continents collide, subduct, and split again.
-            Mountains form where the physics says they should, but you are always
-            in control.
-          </li>
-          <li>
-            <strong>Climate simulation that follows the terrain.</strong>
-            Wind, ocean currents, temperature, and rainfall are calculated from
-            your topography. Deserts form in rain shadows. Rainforests appear
-            where warm, wet air hits mountains. Biomes emerge from the
-            simulation, not from a brush.
-          </li>
-          <li>
-            <strong>Your edits always win.</strong>
-            Generated data never overwrites what you've drawn. Move a river,
-            redraw a coastline, nudge a mountain range — the simulation
-            recalculates around your changes. You're the author, not a
-            spectator.
-          </li>
-        </ul>
-      </div>
-    <!-- Signature -->
-    <div class="wrapper" style="text-align:center;margin-top:3rem;margin-bottom:3rem;">
-      <p class="glitch" data-text="Discover your world." style="font-size:2rem;margin-bottom:1.2rem;">Discover your world.</p>
-      <p style="font-family:var(--font-display);font-size:1.4rem;letter-spacing:0.12em;text-transform:uppercase;">
-        <a href="https://worldbuildingsimulator.com" target="_blank" rel="noopener" class="neon-cyan">worldbuildingsimulator.com</a>
-      </p>
-    </div>
+        <!-- Origin Story -->
+        <div class="card card-prose">
+          <div class="card-title">// worldbuilding_simulator</div>
+          <p>
+            Worldbuilding Simulator is a solution born of a deep frustration
+            with the current suite of mapmaking and worldbuilding tools. When I
+            was building my fantasy world, Zandralor, following the wonderful
+            example of
+            <a
+              href="https://worldbuildingpasta.blogspot.com"
+              target="_blank"
+              rel="noopener"
+              >Worldbuilding Pasta</a
+            >, I had to use 5 separate programs to achieve my goals: Gplates for
+            tectonics, Blender for wrapping my map on a globe to check for polar
+            distortion, and Inkscape for vector cartography. An online climate
+            simulator calculated biomes, and Wonderdraft produced the final
+            aesthetic map for my players.
+          </p>
+          <p>
+            Worldbuilding Simulator is my attempt to solve this problem and
+            consolidate many tools into one. The goal is to create something
+            that puts user experience at the forefront, and create a tool that
+            is easily approachable by Dungeonmasters and Authors, or anyone else
+            that wants to create a fantasy world.
+          </p>
+        </div>
 
+        <!-- Features -->
+        <div class="card card-magenta card-prose">
+          <div class="card-title">// features</div>
+          <ul class="feature-list">
+            <li>
+              <strong>Draw on a globe, not a flat map.</strong>
+              Every other tool makes you draw in 2D and hope it wraps correctly.
+              WBS is globe-first. The poles behave like poles, and projections
+              are outputs, not inputs.
+            </li>
+            <li>
+              <strong>Tectonics simulation you control.</strong>
+              Draw continents, split them, set their motion vectors, run the
+              timeline forward. Watch continents collide, subduct, and split
+              again. Mountains form where the physics says they should, but you
+              are always in control.
+            </li>
+            <li>
+              <strong>Climate simulation that follows the terrain.</strong>
+              Wind, ocean currents, temperature, and rainfall are calculated
+              from your topography. Deserts form in rain shadows. Rainforests
+              appear where warm, wet air hits mountains. Biomes emerge from the
+              simulation, not from a brush.
+            </li>
+            <li>
+              <strong>Your edits always win.</strong>
+              Generated data never overwrites what you've drawn. Move a river,
+              redraw a coastline, nudge a mountain range — the simulation
+              recalculates around your changes. You're the author, not a
+              spectator.
+            </li>
+            <li>
+              <strong>Discovery.</strong>
+              Once the simulation runs, explore your world at any scale. Story,
+              setting, and cultur emerge from the geography, turning your map
+              into a narrative engine that surprises even its creator.
+            </li>
+          </ul>
+        </div>
+        <!-- Signature -->
+        <div
+          class="wrapper"
+          style="text-align: center; margin-top: 3rem; margin-bottom: 3rem"
+        >
+          <p
+            class="glitch"
+            data-text="Discover your world."
+            style="font-size: 2rem; margin-bottom: 1.2rem"
+          >
+            Discover your world.
+          </p>
+          <p
+            style="
+              font-family: var(--font-display);
+              font-size: 1.4rem;
+              letter-spacing: 0.12em;
+              text-transform: uppercase;
+            "
+          >
+            <a
+              href="https://worldbuildingsimulator.com"
+              target="_blank"
+              rel="noopener"
+              class="neon-cyan"
+              >worldbuildingsimulator.com</a
+            >
+          </p>
+        </div>
 
-      <!-- Status -->
-      <div class="card card-prose">
-        <div class="card-title">// status</div>
-        <div class="terminal" style="max-width:100%;">
-          <span class="prompt">wbs --status</span><br>
-          <span style="color:var(--yellow);">[WIP]</span> Mythography engine: reloading<br>
-          <span style="color:var(--green);">[OK]</span> Polygon-Vertex Shader Pipeline: stable<br>
-          <span style="color:var(--magenta);">[ALERT]</span> Terrain generation module: ERROR<br>
-          <span style="color:var(--chrome-dim);">[TODO]</span> Civilization Simulator: planned<br>
-          <span style="color:var(--chrome-dim);">[TODO]</span> Web interface: on roadmap
+        <!-- Status -->
+        <div class="card card-prose">
+          <div class="card-title">// status</div>
+          <div class="terminal" style="max-width: 100%">
+            <span class="prompt">wbs --status</span><br />
+            <span style="color: var(--yellow)">[WIP]</span> Mythography engine:
+            reloading<br />
+            <span style="color: var(--green)">[OK]</span> Polygon-Vertex Shader
+            Pipeline: stable<br />
+            <span style="color: var(--magenta)">[ALERT]</span> Terrain
+            generation module: ERROR<br />
+            <span style="color: var(--chrome-dim)">[TODO]</span> Civilization
+            Simulator: planned<br />
+            <span style="color: var(--chrome-dim)">[TODO]</span> Web interface:
+            on roadmap
+          </div>
         </div>
       </div>
 
-    </div>
+      <!-- Status -->
+      <div class="status-bar">
+        <div class="wrapper">
+          <span class="blink">█</span> WORLD BUILDING SIMULATOR v0.1.0-pre-alpha
+          &mdash; BUILD DATE: 2026.07.16
+        </div>
+      </div>
+    </main>
 
-    <!-- Status -->
-    <div class="status-bar">
+    <!-- Footer -->
+    <footer class="site-footer">
       <div class="wrapper">
-        <span class="blink">█</span> WORLD BUILDING SIMULATOR v0.1.0-pre-alpha &mdash;
-        BUILD DATE: 2026.07.16
+        <p>© 2026 Zoestra Hammer &mdash; All rights reserved.</p>
+        <p style="margin-top: 0.25rem">
+          <a
+            href="https://www.worldbuildingsimulator.com"
+            target="_blank"
+            rel="noopener"
+            >worldbuildingsimulator.com</a
+          >
+        </p>
+        <a class="qr-foot-btn" href="#" id="qr-foot-trigger">[ QR ]</a>
+      </div>
+    </footer>
+
+    <!-- Site QR Modal -->
+    <div class="modal-overlay" id="site-qr-modal">
+      <div class="modal-card">
+        <button class="modal-close" data-modal="site-qr-modal">&times;</button>
+        <div class="card-title">zoestrahammer.com</div>
+        <p
+          style="
+            color: var(--chrome-dim);
+            margin-bottom: 1rem;
+            text-align: center;
+          "
+        >
+          Scan to see my links
+        </p>
+        <div class="qr-placeholder">
+          <img src="img/zh.com_qr.svg" alt="zoestrahammer.com" />
+        </div>
       </div>
     </div>
-  </main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="wrapper">
-      <p>© 2026 Zoestra Hammer &mdash; All rights reserved.</p>
-      <p style="margin-top:0.25rem;">
-        <a href="https://www.worldbuildingsimulator.com" target="_blank" rel="noopener">worldbuildingsimulator.com</a>
-      </p>
-      <a class="qr-foot-btn" href="#" id="qr-foot-trigger">[ QR ]</a>
-    </div>
-  </footer>
-
-  <!-- Site QR Modal -->
-  <div class="modal-overlay" id="site-qr-modal">
-    <div class="modal-card">
-      <button class="modal-close" data-modal="site-qr-modal">&times;</button>
-      <div class="card-title">zoestrahammer.com</div>
-      <p style="color:var(--chrome-dim);margin-bottom:1rem;text-align:center;">Scan to see my links</p>
-      <div class="qr-placeholder">
-        <img src="img/zh.com_qr.svg" alt="zoestrahammer.com" />
-      </div>
-    </div>
-  </div>
-
-  <script>
-    (function() {
-      var body = document.body;
-      var trigger = document.getElementById('qr-foot-trigger');
-      if (trigger) {
-        trigger.addEventListener('click', function(e) {
-          e.preventDefault();
-          document.getElementById('site-qr-modal').classList.add('active');
-          body.classList.add('modal-open');
-        });
-      }
-      document.querySelectorAll('.modal-close, .modal-overlay').forEach(function(el) {
-        el.addEventListener('click', function(e) {
-          if (e.target === el || el.classList.contains('modal-close')) {
-            document.getElementById('site-qr-modal').classList.remove('active');
-            body.classList.remove('modal-open');
-          }
-        });
-      });
-    })();
-  </script>
-
-</body>
+    <script>
+      (function () {
+        var body = document.body;
+        var trigger = document.getElementById("qr-foot-trigger");
+        if (trigger) {
+          trigger.addEventListener("click", function (e) {
+            e.preventDefault();
+            document.getElementById("site-qr-modal").classList.add("active");
+            body.classList.add("modal-open");
+          });
+        }
+        document
+          .querySelectorAll(".modal-close, .modal-overlay")
+          .forEach(function (el) {
+            el.addEventListener("click", function (e) {
+              if (e.target === el || el.classList.contains("modal-close")) {
+                document
+                  .getElementById("site-qr-modal")
+                  .classList.remove("active");
+                body.classList.remove("modal-open");
+              }
+            });
+          });
+      })();
+    </script>
+  </body>
 </html>
