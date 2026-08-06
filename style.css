@@ -17,13 +17,13 @@
   --bg-deep: #0a0a1a;
   --bg-card: rgba(10, 10, 26, 0.85);
   --cyan: #00f0ff;
-  --cyan-dim: #006680;
+  --cyan-dim: #00aacc;
   --magenta: #ff2a6d;
   --magenta-dim: #801133;
   --yellow: #fcee0a;
   --green: #05ffa1;
   --chrome: #b4b4b4;
-  --chrome-dim: #555566;
+  --chrome-dim: #909098;
   --glow-cyan: 0 0 8px #00f0ff, 0 0 20px rgba(0, 240, 255, 0.4);
   --glow-magenta: 0 0 8px #ff2a6d, 0 0 20px rgba(255, 42, 109, 0.4);
   --font-display: 'Orbitron', sans-serif;
@@ -42,6 +42,7 @@ html { font-size: 16px; scroll-behavior: smooth; }
 body {
   font-family: var(--font-body);
   font-size: 1.05rem;
+  font-weight: 500;
   background: var(--bg-void);
   background-image: url('img/background.png');
   background-size: 100% auto;
