@@ -154,6 +154,7 @@
     function openModal(id) {
       document.getElementById(id).classList.add('active');
       body.classList.add('modal-open');
+      history.pushState({ modal: id }, '');
     }
     function closeModal(id) {
       document.getElementById(id).classList.remove('active');
@@ -177,6 +178,15 @@
           closeModal(el.dataset.modal || el.id);
         }
       });
+    });
+
+    // Close modals on browser back button
+    window.addEventListener('popstate', function(e) {
+      var openModals = document.querySelectorAll('.modal-overlay.active');
+      if (openModals.length > 0) {
+        openModals.forEach(function(m) { m.classList.remove('active'); });
+        body.classList.remove('modal-open');
+      }
     });
   </script>
 
